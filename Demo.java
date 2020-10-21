@@ -29,6 +29,9 @@ public class Demo {
     return str;
   }
   public static String arrayDeepToString(int[][] arr) {
+    if (arr.length == 0) {
+      return "{}";
+    }
     String str = "{";
     String spacer = ", ";
     for (int i = 0; i < arr.length - 1; i++) {
@@ -36,5 +39,17 @@ public class Demo {
     }
     str += arrToString(arr[arr.length-1]) + "}";
     return str;
+  }
+  public static int[][] create2DArray(int rows, int cols, int maxValue) {
+    int[][] arr = new int[rows][cols];
+    for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < cols; j++) {
+        arr[i][j] = naturalNumberRandomizerInclusive(maxValue);
+      }
+    }
+    return arr;
+  }
+  public static int naturalNumberRandomizerInclusive(int maxValue) {
+    return (int)Math.floor(Math.random() * (maxValue + 1));
   }
 }
