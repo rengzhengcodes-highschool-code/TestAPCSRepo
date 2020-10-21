@@ -16,4 +16,25 @@ public class Demo {
       repeat++;
     }
   }
+  public static String arrToString(int[] arr) {
+    if (arr.length == 0) {
+      return "{}";
+    }
+    String str ="{";
+    String spacer = ", ";
+    for (int i = 0; i < arr.length - 1; i++) {
+      str += arr[i] + spacer;
+    }
+    str += arr[arr.length-1] + "}";
+    return str;
+  }
+  public static String arrayDeepToString(int[][] arr) {
+    String str = "{";
+    String spacer = ", ";
+    for (int i = 0; i < arr.length - 1; i++) {
+      str += arrToString(arr[i]) + spacer;
+    }
+    str += arrToString(arr[arr.length-1]) + "}";
+    return str;
+  }
 }
