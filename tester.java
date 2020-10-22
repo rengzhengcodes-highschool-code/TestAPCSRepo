@@ -28,5 +28,8 @@ public class tester {
     System.out.println(Demo.arrayDeepToString(arr2));
     System.out.println(Demo.arrayDeepToString(arr3));
     System.out.println(Demo.arrayDeepToString(Demo.create2DArray(5,4,4)));
+    System.out.println(Demo.arrayDeepToString(Demo.create2DArray(6,2,3)));
+    System.out.println(Demo.arrayDeepToString(Demo.create2DArrayRandomized(6,4,4)));
+    System.out.println(Demo.arrayDeepToString(Demo.create2DArrayRandomized(4,10,100)));
   }
 }
